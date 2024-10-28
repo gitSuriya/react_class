@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.home-container {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Blurred background image in home-header */
+
+.home-header {
+  position: relative;
+  background: url('../components/your-header-image.jpg') no-repeat center center/cover;
+  padding: 80px 20px;
+  text-align: center;
+  color: #ffffff;
+  border-bottom: 5px solid #333;
+  animation: slideIn 1.5s ease-in-out;
+  backdrop-filter: blur(px);
+ 
+}
+
+.home-header::before {
+  
+    content: '';
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(2px);
+    z-index: -1;
+}
+  .home-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5em; /* Larger font size for prominence */
+    font-weight: 700; /* Increased weight */
+    color: #fff;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+  }
+.home-header p {
+  font-size: 1.4em;
+  margin: 15px 0;
+  animation: fadeIn 2s ease-in-out 0.5s;
+  
+}
+
+.booking-options {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  animation: fadeIn 2s ease-in-out 1s;
+}
+
+.booking-options input, .search-button {
+  padding: 12px;
+  margin: 0 8px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.search-button {
+  background-color: #ff6f61;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #ff3f3f;
+}
+
+.popular-destinations {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.popular-destinations h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  margin-top: -20px;
+}
+
+/* Updated destination-list for seamless scrolling with increased image height */
+.destination-list-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.destination-list {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  padding-top: 30px;
+}
+
+.destination-card {
+  flex: 0 0 auto;
+  width: 200px; /* Fixed width for uniformity */
+  margin: 0 5px; /* Reduced margin for tighter spacing */
+}
+
+.destination-card img {
+  width: 100%;
+  height: 180px; /* Increased height for larger images */
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.destination-card img:hover {
+  transform: scale(1.05);
+}
+
+/* Keyframes for seamless scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.room-options {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.room-options h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.room-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.room-card {
+  width: 300px;
+  margin-bottom: 40px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.room-card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.room-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6em;
+  margin: 15px 0;
+}
+
+.room-card p {
+  margin: 10px 15px;
+  color: #666;
+}
+
+.room-price {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #333;
+}
+
+.book-room-button {
+  background-color: #ff6f61;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-room-button:hover {
+  background-color: #ff3f3f;
+}
+
+.testimonials {
+  padding: 50px 20px;
+  background-color: #f4f4f9;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.testimonial-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us {
+  padding: 50px 20px;
+  background-color: #ff6f61;
+  text-align: center;
+  color: #fff;
+}
+
+.contact-us h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.site-footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.site-footer p {
+  margin: 5px 0;
+}
+
+.social-media-icons a {
+  color: #ff6f61;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.social-media-icons a:hover {
+  color: #ff3f3f;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
